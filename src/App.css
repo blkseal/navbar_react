@@ -83,6 +83,10 @@ html {
   width: auto;  /* Add this to prevent full width */
 }
 
+.navbarButtons button:hover {
+  color: #ffffff;
+}
+
 .navbarButtons button.active {
   position: relative;
   transform: translate(5px, -2px); /* Move text up and right */
@@ -133,3 +137,8 @@ html {
   padding: 5px;
 }
 
+.navbarLinks img:hover {
+  background: rgba(98, 97, 98, 0.113);
+  border-radius: 20%;
+  cursor: pointer;
+}
