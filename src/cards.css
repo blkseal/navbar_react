@@ -1,0 +1,85 @@
+
+/* Individual Card Styling */
+.card {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+  
+  .card-front, .card-back, .card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.8s;
+  }
+  
+  .card-back {
+    transform: rotateY(180deg);
+    background: #ffffff;
+  }
+  
+  .card:hover .card-front {
+    transform: rotateY(180deg);
+  }
+  
+  .card:hover .card-back {
+    transform: rotateY(360deg);
+  }
+  
+
+
+
+/* Card back */
+
+.card-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: rotateY(180deg);
+    background-color: #ffffff;  /* Match navbar background */
+    border-radius: 12px;   
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Match navbar shadow */
+
+}
+
+.card-back h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 20px;
+}
+
+.card-back h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1a1a1a;  /* Match navbar text color */
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 20px;
+}   
+
+
+.card-back-alugar {
+    padding: 10px 20px; 
+    border-radius: 8px;
+    color: #2B4570;
+    background-color: #ffffff;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: 2px solid #2B4570;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.card-back-alugar:hover {
+    background-color: #2B4570;
+    color: #ffffff;
+    box-shadow: 0 4px 6px rgba(43, 69, 112, 0.2);
+    transform: translateY(-1px);
+}

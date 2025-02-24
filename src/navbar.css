@@ -1,0 +1,133 @@
+
+/* Update navbar styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 268px;
+    height: 100vh;
+    flex-shrink: 0;
+    background: rgba(0, 0, 0, 0.35);
+    border-right: 6px solid transparent;
+    border-image: url('./images/border.svg') 1 stretch;
+  }
+  
+  .navbarHeader {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 0px;
+  }
+  
+  .navbarButtons {
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    flex-direction: column;
+    align-items: flex-start;  /* Changed from center */
+    justify-content: center;
+    gap: 40px;
+    flex-shrink: 0;
+    margin-top: 0px;
+    padding-left: 48px;  /* Add left padding to align with navbarName */
+  }
+  
+  .navbarName {
+    display: flex;
+    width: 274px;
+    height: 44px;
+    flex-shrink: 0;
+    margin-left: 48px;
+    margin-top: 20px;
+  }
+  
+  .navbarTitle {
+    position: absolute;
+    flex-shrink: 0;
+    color: rgba(236, 229, 240, 0.60);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    top: 68px;
+    left: 80px;
+  }
+  .navbarButtons button {
+    height: 27px;
+    flex-shrink: 0;
+    text-align: left;  /* Add this to align text left */
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font: inherit;
+    color: #ECE5F0;
+    font-size: 16px;
+    width: auto;  /* Add this to prevent full width */
+  }
+  
+  .navbarButtons button:hover {
+    color: #ffffff;
+  }
+  
+  .navbarButtons button.active {
+    position: relative;
+    transform: translate(5px, -2px); /* Move text up and right */
+    font-weight: bold; /* Make text bold */
+    transition: transform 0.2s ease; /* Smooth transition */
+  }
+  
+  .navbarButtons button.active::after {
+    content: '';
+    position: absolute;
+    top:100%;
+    left: -10%;
+    width: 102px;
+    height: 6px;
+    background-image: url('./images/2000.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: slideIn 0.3s ease-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+    to {
+      opacity: 1;
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+  
+  .navbarLinks {
+    width: 36px;
+    height: 36px;
+  
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+  }
+  
+  .navbarLinks img {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+  }
+  
+  .navbarLinks img:hover {
+    background: rgba(98, 97, 98, 0.113);
+    border-radius: 20%;
+    cursor: pointer;
+  }
+  
+  
