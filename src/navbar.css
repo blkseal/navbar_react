@@ -1,4 +1,3 @@
-
 /* Update navbar styles */
 .navbar {
     position: fixed;
@@ -27,12 +26,11 @@
     width: 100%;
     height: 60vh;
     flex-direction: column;
-    align-items: flex-start;  /* Changed from center */
+    align-items: stretch;  /* Changed from flex-start */
     justify-content: center;
     gap: 40px;
     flex-shrink: 0;
     margin-top: 0px;
-    padding-left: 48px;  /* Add left padding to align with navbarName */
   }
   
   .navbarName {
@@ -55,19 +53,25 @@
     top: 68px;
     left: 80px;
   }
+  
+  .navbarButtons a {
+    text-decoration: none;
+    width: 100%;
+  }
+  
   .navbarButtons button {
-    height: 27px;
+    width: 100%;
+    height: 40px;  /* Increased for better clickable area */
     flex-shrink: 0;
-    text-align: left;  /* Add this to align text left */
+    text-align: left;
     background: none;
     border: none;
-    padding: 0;
-    margin: 0;
     cursor: pointer;
     font: inherit;
     color: #ECE5F0;
     font-size: 16px;
-    width: auto;  /* Add this to prevent full width */
+    padding: 8px 48px;  /* Added vertical padding */
+    transition: background-color 0.2s ease;
   }
   
   .navbarButtons button:hover {
@@ -76,9 +80,9 @@
   
   .navbarButtons button.active {
     position: relative;
-    transform: translate(5px, -2px); /* Move text up and right */
-    font-weight: bold; /* Make text bold */
-    transition: transform 0.2s ease; /* Smooth transition */
+    transform: translate(5px, -2px);
+    font-weight: bold;
+    transition: transform 0.2s ease;
   }
   
   .navbarButtons button.active::after {
@@ -93,6 +97,7 @@
     background-position: center;
     animation: slideIn 0.3s ease-out forwards;
     opacity: 0;
+    padding-left: 90px;  /* Add left padding to align with navbarName */
   }
   
   @keyframes slideIn {
@@ -111,7 +116,7 @@
   .navbarLinks {
     width: 36px;
     height: 36px;
-  
+    width: 100%;
     position: absolute;
     bottom: 20px;
     left: 20px;
@@ -129,5 +134,4 @@
     border-radius: 20%;
     cursor: pointer;
   }
-  
-  
+

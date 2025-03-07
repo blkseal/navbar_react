@@ -50,3 +50,14 @@ html {
   max-width: 1200px;
   padding: 20px;
 }
+
+.page-content {
+  margin-left: 268px; /* Adjust based on your navbar width */
+  padding: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .page-content {
+    margin-left: 0;
+  }
+}
